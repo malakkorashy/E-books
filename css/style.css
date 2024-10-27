@@ -8,7 +8,9 @@ body {
     padding: 0;
 }
 
-
+.disabled{
+    display: none !important;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -439,7 +441,63 @@ main .circles span {
     display: flex;
     border: 1px solid #e0e0e0;
 }
+.facilities{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    height: auto;
+    background-color: white;
+    box-shadow: 0px 0px 5px #bebdbd ;
+    position: absolute;
+    bottom:  20%;
+}
+.facilities span{
+    width: 25%;
+    padding: 0.4rem 2px ;
+    border-left: rgb(219, 221, 222) 1px solid;
+    cursor: pointer;
+}
+.fadeIn{
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    from{
+        display: none;
+        opacity: 0;
+        transform: translateY(-300%);
+    }
+    to{
+        display: flex;
+        transform: translateY(0%);
 
+    }
+}
+.fadeOut{
+    animation: fadeOut 1s forwards;
+}
+@keyframes fadeOut {
+    from{
+        display: flex;
+
+        transform: translateY(00%);
+    }
+    to{
+        display: none;
+
+        opacity: 0;
+        transform: translateY(-300%);
+
+    }
+}
+.facilities span:hover{
+   animation: coloring 0.5s forwards;
+}
+@keyframes coloring {
+    to{
+        color: #62ab00;
+    }
+}
 /* Small */
 @media (max-width:492px) {
     .products .products-header {
@@ -502,6 +560,7 @@ main .circles span {
     text-align: center;
     gap: 15px;
     margin-top: 40px;
+    position: relative;
 }
 
 
