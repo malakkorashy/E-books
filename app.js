@@ -48,3 +48,39 @@ arr_of_taps.forEach((tap,index) => {
         })
     })
 }
+// make the account hover mak action 
+{
+    let list_of_my_account = document.getElementById('my_account');
+    let account_sub_menu = document.getElementById('account_sub_menu');
+    console.log(list_of_my_account,account_sub_menu);
+    
+    list_of_my_account.addEventListener('mouseover', () => {
+        account_sub_menu.classList.remove('liftUp');
+        account_sub_menu.classList.add('dropDown');
+    })
+    account_sub_menu.addEventListener('mouseout', () => {
+            account_sub_menu.classList.remove('dropDown');
+        account_sub_menu.classList.add('liftUp');
+        
+    })
+}
+// make the slider image
+{
+    let img = document.getElementById('slider_img');
+    let arr_of_navigators = document.getElementsByClassName('navigator');
+    // It is supposed to be an array of images that comes form backend but for now I will use this array
+    let arr_of_images = ['images/main.webp','images/slider2.jpg'];
+    for(let i = 0; i < arr_of_images.length; i++){
+        if(arr_of_images[i].src == img.src){
+            for(let counter_for_navigator = 0; counter_for_navigator < arr_of_navigators.length; counter_for_navigator++){
+                if(counter_for_navigator == i){
+                    arr_of_navigators[counter_for_navigator].classList.add('active');
+                }else{
+                    arr_of_navigators[counter_for_navigator].classList.remove('active');
+                }
+            }
+        }
+    }  // runs the navigator with respect to the imgs
+
+    
+}
