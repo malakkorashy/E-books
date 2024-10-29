@@ -7,17 +7,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../register/style.css">
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
+
     <nav>
         <div class="container">
             <div>
@@ -118,9 +118,9 @@
                 </div>
                 <div class="sign-cart">
                     <div class="signRegister">
-                        <a class="sign" href="../sign/index.html">sign in</a>
-                      <a href="#"><span>or</span>Register</a>
-                  </div>
+                        <a class="sign" href="#">sign in</a>
+                        <a href="../register/index.html"><span>or</span>Register</a>
+                    </div>
                     <a class="cart" href="">
                         <i class="fa-brands fa-opencart"></i>
                         <div class="shop-cart">
@@ -134,56 +134,65 @@
         </div>
 
     </header>
-
-    <div class="register">
+    <div class="sign">
         <div class="container">
+
             <div class="breadcrumb">
                 <a href="">Home</a>
                 <span>></span>
-                <a href="">Create Account</a>
+                <a href="">Account</a>
             </div>
-            <h1>Create Account</h1>
-            <p>Your Personal Details</p>
-            <form action="">
-                <div class="row">
-                    <label for="fristName">Frist Name</label>
-                    <input type="text" name="fristName" placeholder="Frist Name" autofocus>
+            <h1>Account</h1>
+            <div class="signContent">
+                <div class="newCustomer">
+                    <h2>New Customer</h2>
+                    <h4>Register Account</h4>
+                    <p>By creating an account you will be able to shop faster, be up to date on an order's status, and
+                        keep track of the orders you have previously made.</p>
+                    <button>Continue</button>
                 </div>
-                <div class="row">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" placeholder="Last Name">
-                </div>
-                <div class="row">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <div class="row">
-                    <label for="password"> Password</label>
-                    <input type="password" name="password" placeholder="Password">
-                </div>
-                <div class="row submit">
-                    <button type="submit"> <i class="fa-solid fa-user"></i>
-                        Create</button>
-                        <span> or</span>
-                        <a href="">Return to Store</a>
-                </div>
+                <div class="returningCustomer">
+                    <h2>Returning Customer</h2>
+                    <h4>I am a returning customer</h4>
+                    <form action="">
+                        <div class="row">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="row">
+                            <label for="password"> Password</label>
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
 
-            </form>
-        </div>
-    </div>
-    <footer>
-        <div class="footer-top"></div>
-        <div class="footer-inner">
-            <div class="container">
-                <p>Suspendisse in auctor augue. Cras fermentum est ac fermentum tempor. Etiam vel magna volutpat,
-                    posuere eros</p>
-                <img src="../images/payment.avif" alt="">
-                <p class="copyright">Copyright © 2019 <span> MassTechnologist.com.</span>All rights reserved.</p>
+                        <a class="reset" href="">Forgot your password?</a>
 
+                        <div class="row submit">
+                            <button type="submit"> Sign In</button>
+                            <span> or</span>
+                            <a href="">Return to Store</a>
+                        </div>
+                    </form>
+
+                </div>
             </div>
+
         </div>
-    </footer>
-    <script src="../app.js"></script>
+
+
+
+        <footer>
+            <div class="footer-top"></div>
+            <div class="footer-inner">
+                <div class="container">
+                    <p>Suspendisse in auctor augue. Cras fermentum est ac fermentum tempor. Etiam vel magna volutpat,
+                        posuere eros</p>
+                    <img src="../images/payment.avif" alt="">
+                    <p class="copyright">Copyright © 2019 <span> MassTechnologist.com.</span>All rights reserved.</p>
+
+                </div>
+            </div>
+        </footer>
+        <script src="../app.js"></script>
 </body>
 
 </html>
