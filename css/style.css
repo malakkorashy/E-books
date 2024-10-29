@@ -8,12 +8,14 @@ body {
     padding: 0;
 }
 
-.disabled{
+.disabled {
     display: none !important;
 }
-.activated{
+
+.activated {
     background-color: #62ab00;
 }
+
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -72,9 +74,11 @@ nav ul {
     gap: 22px;
     margin: 10px;
 }
+
 nav ul li {
     position: relative;
 }
+
 nav ul li i {
     color: white;
 }
@@ -98,10 +102,10 @@ nav ul li a:hover i {
     }
 }
 
-#account_sub_menu{
+#account_sub_menu {
     overflow: hidden;
-    position: absolute; 
-    top:calc(100% + 10px);
+    position: absolute;
+    top: calc(100% + 10px);
     left: 0;
     box-shadow: 0 0 3px #bebdbd;
     background-color: #fff;
@@ -110,40 +114,50 @@ nav ul li a:hover i {
     z-index: 1;
     padding: 0 0.5rem;
 }
+
 #account_sub_menu span {
     display: block;
     cursor: pointer;
     padding: 1rem 0;
-    border-bottom:1px solid rgb(219, 221, 222) ;
+    border-bottom: 1px solid rgb(219, 221, 222);
 }
-#account_sub_menu span:hover{
+
+#account_sub_menu span:hover {
     animation: coloring 0.5 forwards;
 }
-.dropDown{
+
+.dropDown {
     animation: dropDown 1s forwards;
 }
+
 @keyframes dropDown {
-    from{
-        max-height:0 ;
+    from {
+        max-height: 0;
     }
-    to{
+
+    to {
         max-height: 100vh;
     }
 }
-.liftUp{
+
+.liftUp {
     animation: liftUp 0.5s forwards linear;
 }
+
 @keyframes liftUp {
-    from{
-        max-height:100vh;
+    from {
+        max-height: 100vh;
     }
-    50%{
+
+    50% {
         max-height: 10vh;
     }
-    to{
+
+    to {
         max-height: 00vh;
     }
 }
+
 /*End Nav*/
 
 /*Start Header*/
@@ -173,7 +187,8 @@ header .frist-row .logo .contact-num {
     font-size: 16px;
     font-weight: 600;
 }
-header .frist-row .logo .contact-num .support{
+
+header .frist-row .logo .contact-num .support {
     color: #666666;
     font-weight: 500;
     font-size: 13px;
@@ -304,6 +319,28 @@ header .Second-row .search button {
 header .Second-row .sign-cart {
     display: flex;
     gap: 20px;
+}
+
+header .Second-row .sign-cart .signRegister {
+    display: flex;
+    flex-direction: column;
+}
+
+header .Second-row .sign-cart .signRegister span {
+    padding-right: 5px;
+    cursor: context-menu;
+}
+
+header .Second-row .sign-cart .signRegister a {
+    transition: .5s;
+    color: #282828;
+}
+.signRegister .sign{
+    font-weight: 700;
+}
+
+header .Second-row .sign-cart .signRegister a:hover {
+    color: #62ab00;
 }
 
 header .Second-row .sign-cart .sign span {
@@ -492,48 +529,56 @@ main .circles span {
     display: flex;
     border: 1px solid #e0e0e0;
 }
-.facilities{
+
+.facilities {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 95%;
     height: auto;
     background-color: white;
-    box-shadow: 0px 0px 5px #bebdbd ;
+    box-shadow: 0px 0px 5px #bebdbd;
     position: absolute;
-    bottom:  20%;
+    bottom: 20%;
 }
-.facilities span{
+
+.facilities span {
     width: 25%;
-    padding: 0.4rem 2px ;
+    padding: 0.4rem 2px;
     border-left: rgb(219, 221, 222) 1px solid;
     cursor: pointer;
 }
-.fadeIn{
+
+.fadeIn {
     animation: fadeIn 1s forwards;
 }
+
 @keyframes fadeIn {
-    from{
+    from {
         display: none;
         opacity: 0;
         transform: translateY(-300%);
     }
-    to{
+
+    to {
         display: flex;
         transform: translateY(0%);
 
     }
 }
-.fadeOut{
+
+.fadeOut {
     animation: fadeOut 1s forwards;
 }
+
 @keyframes fadeOut {
-    from{
+    from {
         display: flex;
 
         transform: translateY(00%);
     }
-    to{
+
+    to {
         display: none;
 
         opacity: 0;
@@ -541,14 +586,17 @@ main .circles span {
 
     }
 }
-.facilities span:hover{
-   animation: coloring 0.5s forwards;
+
+.facilities span:hover {
+    animation: coloring 0.5s forwards;
 }
+
 @keyframes coloring {
-    to{
+    to {
         color: #62ab00;
     }
 }
+
 /* Small */
 @media (max-width:492px) {
     .products .products-header {
