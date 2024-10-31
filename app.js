@@ -63,6 +63,31 @@ arr_of_taps.forEach((tap,index) => {
         account_sub_menu.classList.add('liftUp');
         
     })
+
+    let list_of_lists_container = Array.from(document.getElementsByClassName('sub_menu_container'));
+    let list_of_lists = Array.from(document.getElementsByClassName('sub_menu'));
+
+    console.log(list_of_lists_container, list_of_lists);
+
+
+    list_of_lists_container.forEach((container,index) => {
+        console.log(container,index);
+        
+        container.addEventListener('mouseover', () => {
+            console.log('hovered', list_of_lists[index]);
+            list_of_lists[index].classList.remove('liftUp');
+            list_of_lists[index].classList.add('dropDown');
+            
+        })
+        console.log(1);
+    })
+    list_of_lists_container.forEach((container,index) => {
+        container.addEventListener('mouseout', () => {
+            list_of_lists[index].classList.remove('dropDown');
+            list_of_lists[index].classList.add('liftUp');
+        })
+    })
+
 }
 // make the slider image
 {

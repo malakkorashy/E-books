@@ -105,6 +105,7 @@ nav ul li a:hover i {
 #account_sub_menu {
     overflow: hidden;
     position: absolute;
+    flex-direction: column;
     top: calc(100% + 10px);
     left: 0;
     box-shadow: 0 0 3px #bebdbd;
@@ -126,37 +127,7 @@ nav ul li a:hover i {
     animation: coloring 0.5 forwards;
 }
 
-.dropDown {
-    animation: dropDown 1s forwards;
-}
 
-@keyframes dropDown {
-    from {
-        max-height: 0;
-    }
-
-    to {
-        max-height: 100vh;
-    }
-}
-
-.liftUp {
-    animation: liftUp 0.5s forwards linear;
-}
-
-@keyframes liftUp {
-    from {
-        max-height: 100vh;
-    }
-
-    50% {
-        max-height: 10vh;
-    }
-
-    to {
-        max-height: 00vh;
-    }
-}
 
 /*End Nav*/
 
@@ -374,6 +345,64 @@ header .Second-row .sign-cart .cart span {
     color: #62ab00;
     font-weight: bold;
 }
+
+.link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.sub_menu {
+    display: none !important;
+    overflow: hidden;
+    position: absolute;
+    display: flex;
+    box-shadow: 0 0 3px #bebdbd;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 100;
+    
+}
+.active{
+    display: flex !important;
+}
+.sub_menu span{
+    
+    margin: 3px 1rem;
+    display: block;
+    cursor: pointer;
+    padding: 1rem 0;
+    width: 12rem;
+    border-bottom: 1px solid rgb(219, 221, 222);
+}
+.sub_menu span:last-child{
+    border-bottom: none;
+}
+.sub_menu span:hover {
+    animation: coloring 0.5 forwards;
+
+}
+#CATALOG{
+    flex-direction: row;
+    transform: translateX(-50%);
+    
+    gap: 1rem;
+}
+#CATALOG h1{
+    margin: 2rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+#CATALOG span{
+    margin: 0.5rem 0.5rem;
+    border: 0;
+    padding: 0.5rem;
+    color: #666666  ;
+}
+
 
 /*End Header*/
 
@@ -1272,3 +1301,39 @@ footer .footer-inner .copyright span {
 }
 
 /*End Footer*/
+
+.dropDown {
+    display: flex !important;
+
+    animation: dropDown 0.2s forwards;
+}
+
+@keyframes dropDown {
+    from {
+        max-height: 0;
+    }
+
+    to {
+        max-height: 100vh !important;
+    }
+}
+
+.liftUp {
+    display: flex !important;
+
+    animation: liftUp 0.5s forwards linear;
+}
+
+@keyframes liftUp {
+    from {
+        max-height: 100vh;
+    }
+
+    50% {
+        max-height: 10vh;
+    }
+
+    to {
+        max-height: 00vh;
+    }
+}
