@@ -11,8 +11,8 @@ const user_controler=require('../controlers/userControlers');
 
 
 
-// Router.route('/log_in')
-//     .post()
+Router.route('/log_in')
+   .post(userController.login)
 
 
 

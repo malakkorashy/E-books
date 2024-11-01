@@ -2,13 +2,15 @@ const { status } = require("express/lib/response");
 
 
 
-
+const user=require("../user.model.js");
 const register=async(req,res)=>{
 
 
 
 
 }
+const jwt=require('jsonwebtoken')
+const generatejwt= require()
 
 
 const log_in=async(async(req,res,next)=>{
@@ -26,7 +28,8 @@ const user=await user.findOne({email:email});
         return next(error);
     }
     if (user&&matchedPassword ){
-        return res.json({status:httpStatusText.SUCCESS, data:{user:'log in successfully'}});
+        const token= await generatejwt({email:user.email,id:user._id});
+        return res.json({status:httpStatusText.SUCCESS, data:{token}});
     }
 
 else{
