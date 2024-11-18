@@ -1,5 +1,6 @@
 const express=require('express')
-
+const userRouter = require("./routers/userRouter");
+const cartRouter = require("./routers/cartRouter");
 require('dotenv').config()
 
 const app=express();
@@ -78,6 +79,7 @@ app.post("/test",async(req,res)=>{
         
 }
 })
+app.use("/cart", cartRouter);
 
 app.listen(process.env.PORT,()=>{
 
